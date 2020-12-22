@@ -92,23 +92,43 @@
             margin: 0;
         }
 
+        html{
+            scroll-behavior: smooth;
+        }
 
-        .background-shape {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: #4a95ff;
-            width: 25rem;
-            height: 25rem;
-            clip-path: url(#clip-shape-blob);
+        .introduction {
+    min-height: 80vh;
+    background: radial-gradient(circle, #fc5cff 0%, #485CB2 100%);
+    
+    text-align: center;
+    color: #fff;
+}
+
+        .introduction__portrait {
+            position: relative;
+
+            width: 400px;
+            min-height: 400px;
+            margin: 0 auto 120px auto;
+
         }
 
 
         svg {
             width: 100%;
             height: auto;
+          
+        }
+
+        .background-shape {
+            position: absolute;
+            right: -50px;
+            top: 0px;
+            background: radial-gradient(circle, #5cffd4 0%, #172668 70%);
+            width: 500px;
+            height: 500px;
+            clip-path: url(#clip-shape-blob);
+       
         }
 
 
@@ -116,91 +136,164 @@
             position: absolute;
             z-index: 1;
             top: 6px;
-            left: 76px;
-
+            left: 50px;
             width: 237px;
         }
+
+  
 
 
         .secondary_title {
             text-transform: uppercase;
-
         }
+
+
+        .jump-to-content {
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  background-color: #fff;
+  font-size: 1.5rem;
+  padding: 6rem 3rem 3rem;
+  z-index: 1000;
+  transition: top .5s ease-in-out, box-shadow 5s ease-in-out;
+  transform: translate(-50%, 0);
+  box-shadow: 0 0 1rem rgba(0, 0, 238, 0.2);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTQiIGhlaWdodD0iODIiIHZpZXdCb3g9IjAgMCA5NCA4MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNjMuNjE3IDU0LjE1MkM2Mi41Mzg5IDUzLjIzMDEgNjEuMzA4NCA1Mi43NjkyIDYwLjA3NzkgNTIuNjEyOUw0OC4wNzc5IDUxLjUzNDhDNTMuNDYwNyA0My41MzQ4IDU1Ljc2OTMgMzkuODQzOCA1Ni42OTUxIDM4LjE1MThMNjUuMTU2IDQwLjc2OUM2Ni4zODY1IDQxLjIyOTkgNjcuNzczMiA0MS4wNzc2IDY5LjAwMzcgNDAuNjE2N0w4Mi41NDI3IDM1LjA3NzZDODUuNDY0NiAzMy44NDcxIDg2LjY5NSAzMC42MTY3IDg1LjYyMDggMjcuODQ3MUM4NC4zOTAzIDI0LjkyNTIgODEuMTU5OSAyMy42OTQ4IDc4LjM5MDMgMjQuNzY5TDY2LjY5OTMgMjkuNTM4NUwzMy4xNjAzIDE4LjkyMTVDMzEuNjIxMiAxOC40NjA1IDI5LjkyOTggMTguNjEyOSAyOC41NDMxIDE5LjUzODdMMTQuMjM0MSAyOC40NjA2QzExLjYxNjkgMzAuMTUyIDEwLjg1MTMgMzMuNTM4NyAxMi4zODY0IDM2LjE1MkMxNC4wNzc4IDM4Ljc2OTIgMTcuNDY0NSAzOS41MzQ4IDIwLjA3NzggMzcuOTk5N0wzMi4yMjk4IDMwLjQ2MDZMMzguMDc3NSAzMi4zMDgzTDI2LjUzODUgNDkuMjMwM0MyNC42OTA4IDUxLjg0NzUgMjQuMzg2MiA1NS4yMzAzIDI1LjYxNjYgNTguMzA4NEwyOS40NjQzIDY5LjA3ODRIMTYuNTQyM0MxMy4wMDMyIDY5LjA3ODQgMTAuMDgxNCA3Mi4wMDAzIDEwLjA4MTQgNzUuNTM5M0MxMC4wODE0IDc5LjA3ODQgMTMuMDAzMyA4Mi4wMDAyIDE2LjU0MjMgODIuMDAwMkgzOC41NDIzQzQyLjg1MDkgODIuMDAwMiA0Ni4wODE0IDc3LjY5MTYgNDQuNTQyMyA3My41MzkzTDQxLjE1OTUgNjQuMTU2NUw1Ny4xNTk1IDY1LjY5NTZMNjkuOTI5NSA3Ni42MTc2QzcyLjU0NjcgNzguOTI2MiA3Ni42OTkgNzguNjE3NiA3OS4wMDc2IDc1Ljg0OEM4MS4zMTYyIDczLjIzMDggODEuMDA3NiA2OS4wNzg1IDc4LjIzODEgNjYuNzY5OUw2My42MTcgNTQuMTUyWk03Ni4zODMgNzMuMjNDNzUuMzA0OSA3NC42MTI4IDczLjAwMDIgNzQuNzY5MSA3MS43NjU4IDczLjY5MDlMNTguNTM4OCA2Mi40NjA5QzU4LjIzMDIgNjIuMzA4NiA1Ny45MjE2IDYyLjE1MjQgNTcuNjE2OSA2Mi4xNTI0TDM4Ljg0NjkgNjAuNDYxQzM3Ljc2ODggNjAuMzA4NiAzNi44NDY5IDYxLjM4MjggMzcuMzA3OCA2Mi40NjFMNDEuNDYwMSA3NC4xNTJDNDIuMjI5NyA3Ni4zMDQzIDQwLjUzODMgNzguNjEyOSAzOC4zODIgNzguNjEyOUwxNi4zODIgNzguNjE2OEMxNC41MzQzIDc4LjYxNjggMTIuOTk5MiA3Ny4wNzc3IDEyLjk5OTIgNzUuMjM0QzEyLjk5OTIgNzMuMzg2MyAxNC41MzgzIDcxLjg1MTIgMTYuMzgyIDcxLjg1MTJIMzEuNDZDMzIuNTM4MSA3MS44NTEyIDMzLjMwNzcgNzAuNzczMSAzMi44NDI4IDY5Ljg1MTJMMjguMzgxOSA1Ni45MjkyQzI3LjYxMjQgNTQuOTI5MiAyNy43NjQ3IDUyLjYyMDYgMjguOTk5MSA1MC43NzY5TDQxLjc2OTEgMzIuMzA3OUM0Mi4zODYzIDMxLjM4NiA0MS45MjE1IDMwLjMwNzkgNDAuOTk5NiAyOS45OTkzTDMyLjM4MjQgMjcuMjI5OEMzMS45MjE1IDI3LjA3NzQgMzEuNDYwNSAyNy4yMjk4IDMxLjE1MTkgMjcuMzgyMUwxOC4zODE5IDM1LjM4MjFDMTcuMzAzOCAzNi4xNTE2IDE1LjYxMjQgMzUuNjkwNyAxNC45OTkxIDM0LjYxMjZDMTQuMjI5NiAzMy4zODIxIDE0LjY5MDUgMzEuODQzMSAxNS43Njg2IDMxLjIyOThMMzAuMDc3NiAyMi4zMDc5QzMwLjY5NDggMjEuODQ2OSAzMS40NjA0IDIxLjg0NjkgMzIuMjI5OSAyMS45OTkzTDY2LjM4MTkgMzIuNzY5M0M2Ni42OTA1IDMyLjkyMTYgNjcuMTUxNSAzMi45MjE2IDY3LjQ2IDMyLjc2OTNMNzkuNjEyIDI3LjY5MTJDODAuODQyNSAyNy4yMzAyIDgyLjM4MTUgMjcuODQzNSA4Mi44NDI1IDI5LjA3NEM4My4zMDM1IDMwLjMwNDQgODIuNjkwMiAzMS44NDM1IDgxLjQ1OTcgMzIuMzA0NUw2Ny43Njg3IDM3Ljg0NzVDNjcuMzA3OCAzNy45OTk4IDY2LjY5MDYgMzguMTU2MSA2Ni4wNzczIDM3Ljg0NzVMNTYuMzg1OSAzNC43Njk0QzU1LjYxNjQgMzQuNDYwOCA1NC42OTQ1IDM0LjkyMTcgNTQuMzg1OSAzNS44NDc1QzUzLjkyNSAzNi45MjU2IDQ4LjY5NDUgNDQuOTI1NiA0My45MjQ5IDUxLjk5OTVDNDMuMzA3NyA1Mi45MjE0IDQzLjkyNDkgNTQuMzA4MSA0NS4wMDMgNTQuNDYwNEw1OS42MiA1NS44NDMyQzYwLjIzNzIgNTUuODQzMiA2MS4wMDI4IDU2LjE1MTggNjEuNDY3NyA1Ni42MTI3TDc1Ljc3NjcgNjguNzY0N0M3Ny40NjAzIDY5Ljg0NjcgNzcuNjE2NSA3MS44NDY3IDc2LjM4MjIgNzMuMjI5NUw3Ni4zODMgNzMuMjNaIiBmaWxsPSIjMDQwMEQ4Ii8+PHBhdGggZD0iTTU3LjkyMiAyMS42OTFDNjMuNjEzNCAyMS42OTEgNjguMzgzIDE3LjA3MzggNjguMzgzIDExLjIzQzY4LjM4MyA1LjM4MjMgNjMuNzY1OCAwLjc2OTAwMSA1Ny45MjIgMC43NjkwMDFDNTIuMDc0MyAwLjc2OTAwMSA0Ny40NjEgNS4zODYyIDQ3LjQ2MSAxMS4yM0M0Ny40NjEgMTcuMDc3NyA1Mi4wNzgyIDIxLjY5MSA1Ny45MjIgMjEuNjkxWk01Ny45MjIgMy44NDdDNjEuOTIyIDMuODQ3IDY1LjMwNDggNy4wNzc1IDY1LjMwNDggMTEuMjI5OEM2NS4zMDQ4IDE1LjM4MjEgNjIuMDc0MyAxOC42MTI2IDU3LjkyMiAxOC42MTI2QzUzLjc2OTcgMTguNjEyNiA1MC41MzkyIDE1LjM4MjEgNTAuNTM5MiAxMS4yMjk4QzUwLjUzOTIgNy4wNzc1IDUzLjc2OTcgMy44NDcgNTcuOTIyIDMuODQ3WiIgZmlsbD0iIzA0MDBEOCIvPjxwYXRoIGQ9Ik0xMS40NjEgNTEuNTM5QzExLjQ2MSA1MC42MTcxIDEwLjg0MzggNDkuOTk5OSA5LjkyMTkgNDkuOTk5OUgxLjkyMTlDMS4wMDAwMiA0OS45OTk5IDAuMzgyODAxIDUwLjYxNzEgMC4zODI4MDEgNTEuNTM5QzAuMzgyODAxIDUyLjQ2MDkgMC45OTk5OTEgNTMuMDc4MSAxLjkyMTkgNTMuMDc4MUg5LjkyMTlDMTAuODQ3NyA1My4wNzgxIDExLjQ2MSA1Mi4zMDg2IDExLjQ2MSA1MS41MzlaIiBmaWxsPSIjMDQwMEQ4Ii8+PHBhdGggZD0iTTkyLjA3OCA0NEg4NC4wNzhDODMuMTU2MSA0NCA4Mi41Mzg5IDQ0LjYxNzIgODIuNTM4OSA0NS41MzkxQzgyLjUzODkgNDYuNDYxIDgzLjE1NjEgNDcuMDc4MiA4NC4wNzggNDcuMDc4Mkg5Mi4wNzhDOTIuOTk5OSA0Ny4wNzgyIDkzLjYxNzEgNDYuNDYxIDkzLjYxNzEgNDUuNTM5MUM5My42MTcxIDQ0LjYxNzIgOTIuODQ3NiA0NCA5Mi4wNzggNDRaIiBmaWxsPSIjMDQwMEQ4Ii8+PHBhdGggZD0iTTg0LjIzIDU2LjQ2MUg3OS42MTI4Qzc4LjY5MDkgNTYuNDYxIDc4LjA3MzcgNTcuMDc4MiA3OC4wNzM3IDU4LjAwMDFDNzguMDczNyA1OC45MjIgNzguNjkwOSA1OS41MzkyIDc5LjYxMjggNTkuNTM5Mkg4NC4yM0M4NS4xNTE5IDU5LjUzOTIgODUuNzY5MSA1OC45MjIgODUuNzY5MSA1OC4wMDAxQzg1Ljc2OTEgNTcuMDc4MiA4NC45OTk2IDU2LjQ2MSA4NC4yMyA1Ni40NjFaIiBmaWxsPSIjMDQwMEQ4Ii8+PHBhdGggZD0iTTEyLjY5MSA2Mi43N0gxNy4zMDgyQzE4LjIzMDEgNjIuNzcgMTguODQ3MyA2Mi4xNTI4IDE4Ljg0NzMgNjEuMjMwOUMxOC44NDczIDYwLjMwOSAxOC4yMzAxIDU5LjY5MTggMTcuMzA4MiA1OS42OTE4SDEyLjY5MUMxMS43NjkxIDU5LjY5MTggMTEuMTUxOSA2MC4zMDkgMTEuMTUxOSA2MS4yMzA5QzExLjE1MTkgNjIuMTUyOCAxMS45MjE0IDYyLjc3IDEyLjY5MSA2Mi43N1Y2Mi43N1oiIGZpbGw9IiMwNDAwRDgiLz48L3N2Zz4=);
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-position: center 2rem;
+  border: 2px solid #0000EE;
+  border-radius: 4px;
+  text-decoration: none; }
+  .jump-to-content:active, .jump-to-content:focus {
+    top: 5%;
+    box-shadow: 0 0 18rem #0000ee;
+    outline: none; }
+
+
+  /*  Utility and helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+    
     </style>
 
-    <!-- div we'll use for background shape clip-path scss -->
 
-<picture>
-    <!-- <source class="place_the_head" type="image/webp" srcset="./bilder/head/MG_3976large.webp"> -->
-    <source class="place_the_head" 
-         srcset="
+
+    <a class="jump-to-content" href="#main-content">Skip to main content</a>
+    <nav>
+
+
+    </nav>
+<header class="introduction">
+   
+        <!-- div we'll use for background shape clip-path scss -->
+        <figure width="500px" height="500px" class="introduction__portrait">
+            <picture class="place_the_head">
+                <!-- the picture tag lets the browser choose the optimal image type for best performance  -->
+
+                <source srcset="./bilder/head/MG_3976large.webp" type="image/webp">
+                <source srcset="
             ./bilder/head/MG_3976loading.png 75w,
             ./bilder/head/MG_3976small.png 187w,
             ./bilder/head/MG_3976medium.png 247w,
             ./bilder/head/MG_3976large.png 300w, 
-            ./bilder/head/MG_3976original.png 749w" >
+            ./bilder/head/MG_3976original.png 749w">
+                <img src="./bilder/head/MG_3976small.png" alt="Portrett av smilende Eivind Solberg">
+            </picture>
 
 
-      <img class="place_the_head"  src="./bilder/head/MG_3976small.png" alt="Portrett av smilende Eivind Solberg">
-    </picture>
+            <div class="background-shape">
+                <!-- The background shape uses the SVG as a clip path
+                The wrapping of the neck is so that the head is on top breaking out of the animating blob.
+        -->
 
-
-    <div class="background-shape">
-        <picture>
-            <source srcset="./bilder/neck/MG_3976large.webp" type="image/webp">
-            <img class="place_the_head"
-                srcset="
+                <picture>
+                    <source srcset="./bilder/neck/MG_3976large.webp" type="image/webp">
+                    <source srcset="
                 ./bilder/neck/MG_3976loading.png 75w,
                 ./bilder/neck/MG_3976small.png 187w,
                 ./bilder/neck/MG_3976medium.png 247w,
                 ./bilder/neck/MG_3976large.png 300w,
-                ./bilder/head/MG_3976original.png 749w"  
+                ./bilder/neck/MG_3976original.png 749w">
 
-                src="./bilder/neck/MG_3976small.png" 
-                alt="">
-        </picture>
-    </div> <!-- closes the background shape-->
+                    <img src="./bilder/neck/MG_3976small.png" alt="">
+                    <!-- the alt tag is empty because it is one picture with several parts
+                    https://medium.com/@elad/a-complete-guide-for-responsive-images-b13db359c6c7 -->
+                </picture>
+            </div> <!-- closes the background shape-->
 
-    <!-- SVG -->
-    <svg class="shape-blob" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <clipPath id="clip-shape-blob" viewbox="0 0 200 200" clipPathUnits="objectBoundingBox"
-                transform="scale(0.005 0.005)">
-                <path>
-                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 100 100"
-                        to="360 100 100" dur="20s" repeatCount="indefinite" />
+            <!-- SVG -->
+            <svg class="shape-blob" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="clip-shape-blob" viewbox="0 0 200 200" clipPathUnits="objectBoundingBox"
+                        transform="scale(0.005 0.005)">
+                        <path>
+                            <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+                                from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
 
-                    <animate attributeName="d" dur="20s" repeatCount="indefinite"
-                        values="M141.2 63.9c9.3 14.8 11.9 31.8 7.7 46.2-4.1 14.4-14.9 26.2-29 34-14 7.8-31.3 11.5-48.6 6.6-17.4-4.9-34.9-18.6-38.1-34.8-3.2-16.2 7.9-35.1 21.5-51C68.2 49.1 84.1 36.3 100 36.2c16 0 32 12.8 41.2 27.7z;
+                            <animate attributeName="d" dur="20s" repeatCount="indefinite"
+                                values="M141.2 63.9c9.3 14.8 11.9 31.8 7.7 46.2-4.1 14.4-14.9 26.2-29 34-14 7.8-31.3 11.5-48.6 6.6-17.4-4.9-34.9-18.6-38.1-34.8-3.2-16.2 7.9-35.1 21.5-51C68.2 49.1 84.1 36.3 100 36.2c16 0 32 12.8 41.2 27.7z;
         
                             M140.2 71.9c12 11.2 22 27.9 19 41.7-3.1 13.8-19.3 24.7-36.6 33-17.4 8.2-35.8 13.7-49.6 7.8-13.7-6-22.7-23.5-27.8-42.8-5.1-19.2-6.2-40.2 3.6-50.8 9.8-10.6 30.5-10.9 47.9-8.2 17.4 2.6 31.4 8.2 43.5 19.3z;
                             
                                                                                       
                             M141.2 63.9c9.3 14.8 11.9 31.8 7.7 46.2-4.1 14.4-14.9 26.2-29 34-14 7.8-31.3 11.5-48.6 6.6-17.4-4.9-34.9-18.6-38.1-34.8-3.2-16.2 7.9-35.1 21.5-51C68.2 49.1 84.1 36.3 100 36.2c16 0 32 12.8 41.2 27.7z" />
 
-                </path>
-            </clipPath>
-        </defs>
-    </svg>
+                        </path>
+                    </clipPath>
+                </defs>
+            </svg>
+        </figure>
+
+            <div class="content">
 
 
-    <div id="intro">
-        <div class="content">
 
 
-
-
-            <div class="boks">
-                <h2>Heisann! Mitt navn er </h2>
-                <h1>Eivind Solberg</h1>
-                <h2 class="secondary_title">Jeg liker å jobbe med nettsider<br />SVG, CSS, HTML & bevegelig grafikk
-                </h2>
+                <div class="boks">
+                    <h2>Heisann! Mitt navn er </h2>
+                    <h1>Eivind Solberg</h1>
+                    <h2 class="secondary_title">Jeg liker å jobbe med nettsider<br />SVG, CSS, HTML & bevegelig grafikk
+                    </h2>
+                </div>
             </div>
-        </div>
-        <div class="pil"><img class="pilned" src="/svg/pil_ned_negativtrom.svg"></div>
-    </div> <!-- lukker intro div -->
+        </header>
+        <main id="main-content">
 
-    <div id="main" class="main-container">
         <div id="project02" class="project">
             <img class="bar" src="../svg/bar.svg" />
             <h2>HTML og CSS</h2>
@@ -212,10 +305,11 @@
             <img class="hode" src="../bilder_av_eivind/avatar.svg" />
             <h2>SVG</h2>
             <p class="info">
-                    <!--I appreciate the small stuff in life. SVG is small in size but powerful, fast and full of potential for
+                <!--I appreciate the small stuff in life. SVG is small in size but powerful, fast and full of potential for
                 making great experiences.-->
 
-            Vektorgrafikk er fantastisk siden den er rask, tar liten plass og sylskarp uansett hvor høyoppløslig skjermen er. 
+                Vektorgrafikk er fantastisk siden den er rask, tar liten plass og sylskarp uansett hvor høyoppløslig
+                skjermen er.
             </p>
         </div>
 
@@ -259,8 +353,8 @@
                             </div>
                             <div class="tekst">
                                 <h2 class="overskrift">Landingsside</h2>
-                                <p class="ptekst">Ofte brukt til å lage visuelt spennende landingssider, 
-                                    som gir mer ro og orden til nettsidens overskrift, 
+                                <p class="ptekst">Ofte brukt til å lage visuelt spennende landingssider,
+                                    som gir mer ro og orden til nettsidens overskrift,
                                     produkt eller tjeneste</p>
                             </div>
                         </div>
@@ -270,7 +364,7 @@
 
 
 
-                    
+
                 </article>
                 <article class="kort">
                     <a href="kort/nedtelling/nedtelling_jul.html">
@@ -373,8 +467,8 @@
 
 
 
-    </div> <!-- #main-container -->
 
+    </main>
     <div class="footer-container">
         <footer class="wrapper">
             <h3>2018 &copy; <a href="" target="_blank">Sol-berg.no</a> | <a href="https://twitter.com/EivindSolberg"
@@ -382,20 +476,21 @@
         </footer>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-
-
-
-    <script src="js/main.js"></script>
 
 
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
+
+<script src="js/main.js"></script>
 
 </html>
