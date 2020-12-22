@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html lang="nb" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sol-berg</title>
+
+    <meta name="description" content="Sol-berg - digital designer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!--  Essential META Tags for open graph -->
+
+    <meta property="og:title" content="Sol-Berg">
+    <meta property="og:description"
+        content="På denne siden finner du informasjon om hvem Eivind Solberg er og hva han brenner for">
+    <meta property="og:image" content="sol_berg_logo.png">
+    <meta property="og:url" content="http://sol-berg.no">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <!-- Hotjar Tracking Code for https://sol-berg.no -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 2145072,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZT1J94L8Q9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZT1J94L8Q9');
+    </script>
+
+
+    <!-- For displaying favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Poppins" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="flexkort.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+
+        .background-shape {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #4a95ff;
+            width: 25rem;
+            height: 25rem;
+            clip-path: url(#clip-shape-blob);
+        }
+
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+
+        .place_the_head {
+            position: absolute;
+            z-index: 1;
+            top: 6px;
+            left: 76px;
+
+            width: 237px;
+        }
+
+
+        .secondary_title {
+            text-transform: uppercase;
+
+        }
+    </style>
+
+    <!-- div we'll use for background shape clip-path scss -->
+
+<picture>
+    <!-- <source type="image/webp" srcset="./bilder/head/MG_3976large.webp"> -->
+    <img class="place_the_head" 
+         srcset="
+            ./bilder/head/_MG_3976loading.png 75w,
+            ./bilder/head/_MG_3976small.png 187w,
+            ./bilder/head/_MG_3976medium.png 247w,
+            ./bilder/head/_MG_3976large.png 300w, 
+            ./bilder/head/_MG_3976original.png 749w" 
+
+        src="./bilder/head/_MG_3976small.png"
+        alt="Portrett av smilende Eivind Solberg">
+    </picture>
+
+
+    <div class="background-shape">
+        <picture>
+            <source srcset="./bilder/neck/MG_3976large.webp" type="image/webp">
+            <img class="place_the_head"
+                srcset="
+                ./bilder/neck/_MG_3976loading.png 75w,
+                ./bilder/neck/_MG_3976small.png 187w,
+                ./bilder/neck/_MG_3976medium.png 247w,
+                ./bilder/neck/_MG_3976large.png 300w,
+                ./bilder/head/_MG_3976original.png 749w"  
+
+                src="./bilder/neck/_MG_3976small.png" 
+                alt="">
+        </picture>
+    </div> <!-- closes the background shape-->
+
+    <!-- SVG -->
+    <svg class="shape-blob" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <clipPath id="clip-shape-blob" viewbox="0 0 200 200" clipPathUnits="objectBoundingBox"
+                transform="scale(0.005 0.005)">
+                <path>
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 100 100"
+                        to="360 100 100" dur="20s" repeatCount="indefinite" />
+
+                    <animate attributeName="d" dur="20s" repeatCount="indefinite"
+                        values="M141.2 63.9c9.3 14.8 11.9 31.8 7.7 46.2-4.1 14.4-14.9 26.2-29 34-14 7.8-31.3 11.5-48.6 6.6-17.4-4.9-34.9-18.6-38.1-34.8-3.2-16.2 7.9-35.1 21.5-51C68.2 49.1 84.1 36.3 100 36.2c16 0 32 12.8 41.2 27.7z;
+        
+                            M140.2 71.9c12 11.2 22 27.9 19 41.7-3.1 13.8-19.3 24.7-36.6 33-17.4 8.2-35.8 13.7-49.6 7.8-13.7-6-22.7-23.5-27.8-42.8-5.1-19.2-6.2-40.2 3.6-50.8 9.8-10.6 30.5-10.9 47.9-8.2 17.4 2.6 31.4 8.2 43.5 19.3z;
+                            
+                                                                                      
+                            M141.2 63.9c9.3 14.8 11.9 31.8 7.7 46.2-4.1 14.4-14.9 26.2-29 34-14 7.8-31.3 11.5-48.6 6.6-17.4-4.9-34.9-18.6-38.1-34.8-3.2-16.2 7.9-35.1 21.5-51C68.2 49.1 84.1 36.3 100 36.2c16 0 32 12.8 41.2 27.7z" />
+
+                </path>
+            </clipPath>
+        </defs>
+    </svg>
+
+
+    <div id="intro">
+        <div class="content">
+
+
+
+
+            <div class="boks">
+                <h2>Heisann! Mitt navn er </h2>
+                <h1>Eivind Solberg</h1>
+                <h2 class="secondary_title">Jeg liker å jobbe med nettsider<br />SVG, CSS, HTML & bevegelig grafikk
+                </h2>
+            </div>
+        </div>
+        <div class="pil"><img class="pilned" src="/svg/pil_ned_negativtrom.svg"></div>
+    </div> <!-- lukker intro div -->
+
+    <div id="main" class="main-container">
+        <div id="project02" class="project">
+            <img class="bar" src="../svg/bar.svg" />
+            <h2>HTML og CSS</h2>
+            <p class="info">Why do I like HTML and CSS? because its the foundation of the free and open web. It is
+                standards that are in constant development to serve humans in the best way, to adapt to new needs.</p>
+        </div>
+
+        <div id="project01" class="project">
+            <img class="hode" src="../bilder_av_eivind/avatar.svg" />
+            <h2>SVG</h2>
+            <p class="info">
+                    <!--I appreciate the small stuff in life. SVG is small in size but powerful, fast and full of potential for
+                making great experiences.-->
+
+            Vektorgrafikk er fantastisk siden den er rask, tar liten plass og sylskarp uansett hvor høyoppløslig skjermen er. 
+            </p>
+        </div>
+
+
+        <div class="presentasjon">
+            <h2>Emner fra undervisning </h2>
+            <p>I dette prosjektet ble det jobbet med å visualiere mange ulike valg på en måte som er responsiv i tillegg
+                til å være enkel å endre på.</p>
+        </div>
+
+        <!-- Alle kortene-->
+        <div class="sentrert">
+            <!-- Sentrer siden -->
+            <section class="allekortene">
+                <article class="kort">
+                    <a href="kort/hamburgermeny/hamburgermeny.html">
+                        <div class="menybilde">
+                            <img src="kort/hamburgermeny/meny.png" alt="responsiv meny som er kollapset og åpen">
+                            <div class="tekstogikon">
+                                <img class="hikon" src="ikoner/meny.svg" alt="responsiv meny">
+                            </div>
+                            <div class="tekst">
+                                <h2 class="overskrift">Responsiv meny</h2>
+                                <p class="ptekst">Menyer skal være tilgjengelig og brukervennlig på både mobil og
+                                    desktop. Benytter seg av flexbox og font-awesome</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="kort">
+
+
+
+
+
+                    <a href="kort/fullskjerm/poly.html">
+                        <div class="menybilde">
+                            <img src="kort/fullskjerm/kortbilde/fullskjerm02.png" alt=" ">
+                            <div class="tekstogikon">
+                                <img class="hikon" src="kort/fullskjerm/fullskjerm.svg" alt="Ikon av fullskjermside">
+                            </div>
+                            <div class="tekst">
+                                <h2 class="overskrift">Landingsside</h2>
+                                <p class="ptekst">Ofte brukt til å lage visuelt spennende landingssider, 
+                                    som gir mer ro og orden til nettsidens overskrift, 
+                                    produkt eller tjeneste</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+
+
+                    
+                </article>
+                <article class="kort">
+                    <a href="kort/nedtelling/nedtelling_jul.html">
+                        <div class="menybilde">
+                            <img src="kort/nedtelling/nedtelling.png" alt="bilde av nedtellingssiden">
+
+
+                            <div class="tekstogikon">
+                                <img class="hikon" src="kort/nedtelling/nedtelling.svg" alt="Ikon av nedtellingsur">
+                            </div>
+                            <div class="tekst">
+                                <h2 class="overskrift">Nedtelling til jul</h2>
+                                <p class="ptekst">JavaScript, jQuery og andre biblioteker kan brukes til så mangt, som å
+                                    telle ned til en spesiel dato for eksempel julaften</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="kort">
+                    <a href="http://elmi.afr.ninja/">
+                        <div class="menybilde">
+                            <img src="kort/wordpress/wordpress02.png" alt="bilde av WordPress sider">
+
+
+                            <div class="tekstogikon">
+                                <img class="hikon" src="kort/wordpress/wordpress02.svg" alt="ikon til WordPress ">
+                            </div>
+
+                            <div class="tekst">
+                                <h2 class="overskrift">WordPress</h2>
+                                <p class="ptekst">Trenger du en nettbutikk eller en CMS løsning som er enkel å bruke
+                                    etter siden er satt opp?</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="kort">
+                    <a
+                        href="https://projects.raspberrypi.org/en/projects?interests%5B%5D=games&technologies%5B%5D=python">
+                        <div class="menybilde">
+                            <img src="kort/rpi/rpi02.png" alt=" ">
+                            <div class="tekstogikon">
+                                <img class="hikon" src="kort/rpi/rpi.svg" alt="Ikon av Raspberry PI">
+                            </div>
+                            <div class="tekst">
+                                <h2 class="overskrift">Raspberry PI + IoT</h2>
+                                <p class="ptekst">En datamaskin på størrelse med et bankkort som kan brukes til det
+                                    meste. Koble til kamera og sensorer og la moroa begynne!</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="kort">
+                    <a href="kort/svg/svg.html">
+                        <div class="menybilde">
+                            <img src="kort/svg/kart.png" alt="Interaktivt kart av verden">
+                            <div class="tekstogikon">
+                                <img class="hikon" src="kort/svg/ai.svg" alt=" ">
+                            </div>
+                            <div class="tekst">
+                                <h2 class="overskrift">interaktiv SVG</h2>
+                                <p class="ptekst">Vi bruker SVG, fordi det tar liten plass, er raskt, kan skaleres uten
+                                    tap og det gir muligheter til å gjøre noe med grafikken.</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="kort">
+                    <a href="https://xd.adobe.com/view/c66248aa-a80d-4d5f-951c-1c71256bd1f2">
+                        <div class="menybilde">
+                            <img src="kort/adobexd/xd02.png" alt="Prototype verktøy">
+                            <div class="tekstogikon">
+                                <img class="hikon" src="kort/adobexd/adboexd.svg" alt=" ">
+                            </div>
+                            <div class="tekst">
+                                <h2 class="overskrift">Adobe XD</h2>
+                                <p class="ptekst">Prototype av en reiseapp til New York, utformet i Adobe XD. Viser
+                                    datoer for reise og tips </p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="kort">
+                    <a href="kort/epost/epost.html">
+                        <div class="menybilde">
+                            <img src="kort/epost/meny.png" alt="Bilde av E-post signatur">
+                            <div class="tekstogikon">
+                                <img class="hikon" src="kort/epost/epost.svg" alt="E-post ikon">
+                            </div>
+                            <div class="tekst">
+                                <h2 class="overskrift">Epost signatur</h2>
+                                <p class="ptekst">Det sendes fremdeles eposter og da er det greit å kunne legge ved litt
+                                    ekstra kontaktinformasjon</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </section>
+        </div>
+
+
+
+    </div> <!-- #main-container -->
+
+    <div class="footer-container">
+        <footer class="wrapper">
+            <h3>2018 &copy; <a href="" target="_blank">Sol-berg.no</a> | <a href="https://twitter.com/EivindSolberg"
+                    target="_blank">@EivindSolberg</a></h3>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
+
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
